@@ -1,6 +1,6 @@
 # Run Evaluation on Cityscapes with a pretrained model
 
-CMD: "python -m torch.distributed.launch --nproc_per_node=8 train.py"
+CMD: "python -m torch.distributed.launch --nproc_per_node=4 train.py"
 
 HPARAMS: [
   {
@@ -9,7 +9,7 @@ HPARAMS: [
    syncbn: true,
    apex: true,
    fp16: true,
-   bs_val: 2,
+   bs_val: 1,
    eval: val,
    n_scales: "0.5,1.0,2.0",
    snapshot: "ASSETS_PATH/seg_weights/cityscapes_ocrnet.HRNet_Mscale_outstanding-turtle.pth",

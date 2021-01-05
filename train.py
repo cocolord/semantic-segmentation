@@ -142,7 +142,7 @@ parser.add_argument('--poly_exp', type=float, default=1.0,
                     help='polynomial LR exponent')
 parser.add_argument('--poly_step', type=int, default=110,
                     help='polynomial epoch step')
-parser.add_argument('--bs_trn', type=int, default=2,
+parser.add_argument('--bs_trn', type=int, default=1,
                     help='Batch size for training per gpu')
 parser.add_argument('--bs_val', type=int, default=1,
                     help='Batch size for Validation per gpu')

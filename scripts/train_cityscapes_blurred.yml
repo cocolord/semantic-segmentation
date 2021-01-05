@@ -6,7 +6,7 @@ CMD: "python -m torch.distributed.launch --nproc_per_node=4 train.py"
 
 HPARAMS: [
   {
-   dataset: cityscapes,
+   dataset: cityscapes_blurred,
    cv: 0,
    syncbn: true,
    apex: true,
@@ -16,10 +16,10 @@ HPARAMS: [
    poly_exp: 2,
    lr: 5e-3,
    rmi_loss: true,
-   max_epoch: 175,
+   max_epoch: 35,
    n_scales: "0.5,1.0,2.0",
    supervised_mscale_loss_wt: 0.05,
-   snapshot: "ASSETS_PATH/seg_weights/ocrnet.HRNet_industrious-chicken.pth",
+   snapshot: "ASSETS_PATH/seg_weights/cityscapes_ocrnet.HRNet_Mscale_outstanding-turtle.pth",
    arch: ocrnet.HRNet_Mscale,
    result_dir: LOGDIR,
    RUNX.TAG: '{arch}',
