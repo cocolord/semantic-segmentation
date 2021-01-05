@@ -1,3 +1,5 @@
 assets/
 logs/
 __pycache__/
+.runx
+config.py
